@@ -77,11 +77,11 @@ class UserProfileControllerTest {
 
     @Test
     public void testDeleteUserProfile() {
-        Mockito.when(userProfileService.deleteUserProfile(Mockito.any())).thenReturn(TEST_ID);
+        Mockito.when(userProfileService.deleteUserProfile(Mockito.any())).thenReturn(true);
 
-        String deletedProfileId = userProfileController.deleteUserProfile();
+        String profileDeletionResult = userProfileController.deleteUserProfile();
 
-        Assertions.assertEquals(TEST_ID, deletedProfileId);
+        Assertions.assertEquals("OK", profileDeletionResult);
         Mockito.verify(userProfileService).deleteUserProfile(Mockito.any());
     }
 }

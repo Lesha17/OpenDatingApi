@@ -36,6 +36,10 @@ public class UserProfileController {
     @GetMapping("/delete")
     public String deleteUserProfile() {
         String userProfileId = "userProfileIdFetchedFromJwt";
-        return userProfileService.deleteUserProfile(userProfileId);
+        if(userProfileService.deleteUserProfile(userProfileId)) {
+            return "OK";
+        } else {
+            return "Error";
+        }
     }
 }

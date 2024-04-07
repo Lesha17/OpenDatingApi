@@ -17,7 +17,8 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok:1.18.32")
 
     implementation("org.springframework.boot:spring-boot-starter-web")
-
+    implementation("org.mongodb:mongodb-driver-core:5.0.1")
+    implementation("org.mongodb:mongodb-driver-sync:5.0.1")
 
     testCompileOnly("org.projectlombok:lombok:1.18.32")
     testAnnotationProcessor("org.projectlombok:lombok:1.18.32")
